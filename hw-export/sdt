@@ -1,0 +1,4 @@
+sdtgen set_dt_param -dir /home/rahulan.thevakanthan/Documents/Document2/fpga-project-repo-3/vivado/build/kv260/hw-export
+sdtgen set_dt_param -xsa /home/rahulan.thevakanthan/Documents/Document2/fpga-project-repo-3/vivado/build/kv260/kv260.xsa
+sdtgen set_dt_param -include_dts /home/rahulan.thevakanthan/Documents/Document2/fpga-project-repo-3/vivado/build/kv260/device-tree/system-user.dtsi
+sdtgen generate_sdt
