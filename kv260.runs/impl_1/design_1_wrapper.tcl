@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Users/rahul/Downloads/kv260/kv260.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -107,13 +106,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-  set_param power.BramSDPPropagationFix 1
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
-  set_param runs.launchOptions { -jobs 1  }
+  set_param runs.launchOptions { -jobs 4  }
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/rahul/Downloads/kv260/kv260.cache/wt [current_project]
 set_property TOP design_1_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

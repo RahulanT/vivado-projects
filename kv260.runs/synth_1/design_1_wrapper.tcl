@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/synth_1/design_1_wrapper.tcl"
+  variable script "C:/Users/rahul/Downloads/kv260/kv260.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,11 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param power.BramSDPPropagationFix 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -68,12 +63,13 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.cache/wt [current_project]
-set_property parent.project_path C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/rahul/Downloads/kv260/kv260.cache/wt [current_project]
+set_property parent.project_path C:/Users/rahul/Downloads/kv260/kv260.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
+set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.3} [current_project]
 set_property ip_repo_paths {
   c:/Users/rahul/ip_repository
   {c:/Users/rahul/Downloads/DPUCZDX8G (Vivado)}
@@ -84,30 +80,30 @@ set_property ip_output_repo c:/home/rahulan.thevakanthan/Documents/Document2/fpg
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.srcs/sources_1/imports/hdl/design_1_wrapper.vhd
-add_files C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/design_1_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/imports/hdl/design_1_wrapper.vhd
+add_files C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_dpuczdx8g_0_0/design_1_dpuczdx8g_0_0_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0/design_1_axi_interconnect_hp0_imp_s01_data_fifo_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -122,7 +118,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/rahul/Downloads/kv260/kv260.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

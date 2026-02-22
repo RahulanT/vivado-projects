@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_rst_ps8_0_100M_0_synth_1'
+HD_PWD='C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_rst_ps8_0_100M_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

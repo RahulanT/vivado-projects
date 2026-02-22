@@ -3,15 +3,15 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Feb 13 01:47:49 2026
-# Process ID         : 9936
-# Current directory  : C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/impl_1
+# Start of session at: Sun Feb 22 07:43:32 2026
+# Process ID         : 20380
+# Current directory  : C:/Users/rahul/Downloads/kv260/kv260.runs/impl_1
 # Command line       : vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file           : C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/impl_1/design_1_wrapper.vdi
-# Journal file       : C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/impl_1\vivado.jou
+# Log file           : C:/Users/rahul/Downloads/kv260/kv260.runs/impl_1/design_1_wrapper.vdi
+# Journal file       : C:/Users/rahul/Downloads/kv260/kv260.runs/impl_1\vivado.jou
 # Running On         : GoldenFlower
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26100
+# Operating System   : 26200
 # Processor Detail   : Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz
 # CPU Frequency      : 1896 MHz
 # CPU Physical cores : 4
@@ -19,6 +19,6 @@
 # Host memory        : 17011 MB
 # Swap memory        : 51539 MB
 # Total Virtual      : 68550 MB
-# Available Virtual  : 42647 MB
+# Available Virtual  : 32315 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

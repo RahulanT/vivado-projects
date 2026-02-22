@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.tcl"
+  variable script "C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -65,21 +65,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.cache/wt [current_project]
-set_property parent.project_path C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/rahul/Downloads/kv260/kv260.cache/wt [current_project]
+set_property parent.project_path C:/Users/rahul/Downloads/kv260/kv260.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:kv260_som:part0:1.4 [current_project]
-set_property ip_repo_paths c:/Users/rahul/ip_repository [current_project]
+set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.3} [current_project]
+set_property ip_repo_paths {
+  c:/Users/rahul/ip_repository
+  {c:/Users/rahul/Downloads/DPUCZDX8G (Vivado)}
+  {c:/Users/rahul/Downloads/DPUCZDX8G_ip_repo_VAI_v3.0 (7)/DPUCZDX8G_ip_repo_VAI_v3.0}
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/home/rahulan.thevakanthan/Documents/Document2/fpga-project-repo-3/vivado/build/ip_cache [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
+read_ip -quiet C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -95,7 +100,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1 -new_name design_1_zynq_ultra_ps_e_0_0 -ip [get_ips design_1_zynq_ultra_ps_e_0_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1 -new_name design_1_zynq_ultra_ps_e_0_0 -ip [get_ips design_1_zynq_ultra_ps_e_0_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -150,32 +155,32 @@ generate_parallel_reports -reports { "report_utilization -file design_1_zynq_ult
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp
+  file copy -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v
+  write_verilog -force -mode synth_stub c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -185,32 +190,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp
+  file copy -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_stub.v c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v
+  file rename -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_stub.v c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_stub.vhdl c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl
+  file rename -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_stub.vhdl c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v
+  file rename -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
+  file rename -force C:/Users/rahul/Downloads/kv260/kv260.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -218,15 +223,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0]} {
+if {[file isdir C:/Users/rahul/Downloads/kv260/kv260.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0]} {
   catch { 
-    file copy -force c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0
+    file copy -force c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v C:/Users/rahul/Downloads/kv260/kv260.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0
   }
 }
 
-if {[file isdir C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0]} {
+if {[file isdir C:/Users/rahul/Downloads/kv260/kv260.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0]} {
   catch { 
-    file copy -force c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl C:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0
+    file copy -force c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl C:/Users/rahul/Downloads/kv260/kv260.ip_user_files/ip/design_1_zynq_ultra_ps_e_0_0
   }
 }
 file delete __synthesis_is_running__

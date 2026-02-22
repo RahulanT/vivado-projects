@@ -1,45 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="23460" HostCore="8" HostMemory="017011023872">
+    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="27052" HostCore="8" HostMemory="017011023872">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="2564" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="16180" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="20208" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="5688" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="8992" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="3632" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="18032" HostCore="8" HostMemory="017011023872">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="21728" HostCore="8" HostMemory="017011023872">
+    <Process Command="vivado.bat" Owner="rahul" Host="GOLDENFLOWER" Pid="18300" HostCore="8" HostMemory="017011023872">
     </Process>
 </ProcessHandle>

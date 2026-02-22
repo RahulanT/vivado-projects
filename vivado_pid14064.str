@@ -173,3 +173,42 @@ Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rahul/Downloads/DPUCZDX8G (Vivado)'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/rahul/Downloads/DPUCZDX8G_ip_repo_VAI_v3.0 (7)/DPUCZDX8G_ip_repo_VAI_v3.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'. 
 // WARNING: HEventQueue.dispatchEvent() is taking  2429 ms.
 // WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:47 ; elapsed = 00:00:30 . Memory (MB): peak = 1324.977 ; gain = 240.938 
+// Project name: kv260; location: C:/Users/rahul/Downloads/kv260; part: xck26-sfvc784-2LV-c
+dismissDialog("Open Project"); // bh (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Reading block design file <C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/bd/design_1/design_1.bd>... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,060 MB. GUI used memory: 86 MB. Current time: 2/22/26, 6:47:18 AM EST
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background", "Open Block Design"); // a (RDIResource.ProgressDialog_BACKGROUND)
+// 'bN' command handler elapsed time: 4 seconds
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// [Engine Memory]: 1,060 MB (+14351kb) [00:01:40]
+// Tcl Message: Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.5 - zynq_ultra_ps_e_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:dpuczdx8g:4.1 - dpuczdx8g_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_hp0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s01_data_fifo Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds Successfully read diagram <design_1> from block design file <C:/Users/rahul/Downloads/kv260/kv260.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 160 MB (+1137kb) [00:01:53]
+// [Engine Memory]: 1,168 MB (+57182kb) [00:01:53]
+// WARNING: HEventQueue.dispatchEvent() is taking  4232 ms.
+// Elapsed time: 15 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1453.117 ; gain = 112.441 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,198 MB. GUI used memory: 90 MB. Current time: 2/22/26, 6:47:34 AM EST
+// WARNING: HTimer (Open addressing views timer) is taking 798ms to process. Increasing delay to 1300 ms.
+dismissDialog("Open Block Design"); // bh (Open Block Design Progress)

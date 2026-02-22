@@ -16,6 +16,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 # IP: bd/design_1/ip/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0/design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0 || ORIG_REF_NAME==design_1_axi_interconnect_hp0_upgraded_ipi_imp_xbar_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_axi_interconnect_hp0_0/design_1_axi_interconnect_hp0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_hp0_0 || ORIG_REF_NAME==design_1_axi_interconnect_hp0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ps8_0_axi_periph_0/design_1_ps8_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_0 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0/design_1_axi_interconnect_hp0_imp_s00_data_fifo_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_hp0_imp_s00_data_fifo_0 || ORIG_REF_NAME==design_1_axi_interconnect_hp0_imp_s00_data_fifo_0} -quiet] -quiet
 
@@ -25,13 +31,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_axi_interconnect_hp0_imp_auto_us_df_0/design_1_axi_interconnect_hp0_imp_auto_us_df_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_hp0_imp_auto_us_df_0 || ORIG_REF_NAME==design_1_axi_interconnect_hp0_imp_auto_us_df_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_interconnect_hp0_0/design_1_axi_interconnect_hp0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_hp0_0 || ORIG_REF_NAME==design_1_axi_interconnect_hp0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_ds_0/design_1_ps8_0_axi_periph_imp_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_imp_auto_ds_0 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_imp_auto_ds_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ps8_0_axi_periph_0/design_1_ps8_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_0 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_0} -quiet] -quiet
-
-# XDC: c:/Users/rahul/Downloads/te0820_dpu/te0820_dpu.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/rahul/Downloads/kv260/kv260.gen/sources_1/bd/design_1/design_1_ooc.xdc
